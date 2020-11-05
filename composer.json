@@ -2,9 +2,31 @@
   "name": "devmoin/plugin-system",
   "type": "library",
   "description": "Laravel Plugin System",
+  "keywords": ["laravel", "plugin-manager"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moin",
+      "email": "idevmoin@gmail.com"
+    },
+    {
+      "name": "Fahad",
+      "email": "idevfahad@gmail.com"
+    }
+  ],
   "autoload": {
-    "psr-0" : {
-      "MoinPlugin" : "src"
+    "psr-4" : {
+      "MoinPlugin\\" : "src"
+    }
+  },
+  "require": {
+    "laravel/framework": "^5.4|^6.0|^7.0|^8.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MoinPlugin\\ServiceProvider"
+      ]
     }
   }
 }
