@@ -31,6 +31,11 @@ class ServiceProvider extends BaseServiceProvider
         $this->commands([
             Console\SetupPluginSystemCommand::class,
         ]);
+
+        $this->commands([
+            Console\CreatePlugin::class,
+        ]);
+
     }
 
     protected function registerRequestMacro()
