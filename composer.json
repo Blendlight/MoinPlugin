@@ -6,6 +6,5 @@
     "psr-0" : {
       "MoinPlugin" : "src"
     }
-  },
-
+  }
 }
