@@ -1,5 +1,5 @@
 {
-  "name": "devmoin/pluginSystem",
+  "name": "devmoin/plugin-system",
   "type": "library",
   "description": "Laravel Plugin System",
   "autoload": {
