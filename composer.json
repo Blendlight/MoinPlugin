@@ -1,0 +1,11 @@
+{
+  "name": "devmoin/pluginSystem",
+  "type": "library",
+  "description": "Laravel Plugin System",
+  "autoload": {
+    "psr-0" : {
+      "MoinPlugin" : "src"
+    }
+  },
+
+}
