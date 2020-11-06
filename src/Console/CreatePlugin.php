@@ -59,28 +59,35 @@ class CreatePlugin extends Command
         }
         mkdir(base_path('plugins/'.$plugin_name));
         mkdir(base_path('plugins/'.$plugin_name.'/routes'));
+        mkdir(base_path('plugins/'.$plugin_name.'/Controllers'));
 
+        //add Plugin info file
         file_put_contents($path.'/'.$plugin_name.'.info', "Plugin Name: ${plugin_name}
-Description: Plugin Description
-Version: 1.0
-Author: AuthorName
-;Empty line at last");
+        Description: Plugin Description
+        Version: 1.0
+        Author: AuthorName
+        ;Empty line at last");
 
-        file_put_contents($path.'/routes/web.php', "<?php
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-Route::get('/plugin/page/$plugin_name', function(){
-    return 'Plugin ${plugin_name} plugin page.';
-});
- ");
+        //Copy controller and route to new plugin directory
+        
 
-        file_put_contents($path.'/routes/api.php', "<?php
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-//Route::get('/plugin/page/$plugin_name/api', function(){
-//    return 'Plugin ${plugin_name} plugin page.';
-//});
- ");
+
+
+//         file_put_contents($path.'/routes/web.php', "<?php
+// use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Route;
+// Route::get('/plugin/page/$plugin_name', function(){
+//     return 'Plugin ${plugin_name} plugin page.';
+// });
+//  ");
+
+//         file_put_contents($path.'/routes/api.php', "<?php
+// use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Route;
+// //Route::get('/plugin/page/$plugin_name/api', function(){
+// //    return 'Plugin ${plugin_name} plugin page.';
+// //});
+//  ");
         $this->info("Plugin $plugin_name created Successfully");
         return 1;
     }

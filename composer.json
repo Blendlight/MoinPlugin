@@ -25,7 +25,8 @@
   "extra": {
     "laravel": {
       "providers": [
-        "MoinPlugin\\ServiceProvider"
+        "MoinPlugin\\ServiceProvider",
+        "MoinPlugin\\RouteServiceProvider"
       ]
     }
   }

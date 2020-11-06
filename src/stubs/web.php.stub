@@ -1,0 +1,7 @@
+<?php
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use MoinPlugins\{plugName}\Controllers\WelcomeController;
+
+
+Route::get('/plugin/page/{plugName}', [WelcomeController::class, 'index']);
